@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta Digital - Cides Performance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+        }
+
+        .card-gradient {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .accent-border {
+            border-left: 4px solid #f97316;
+        }
+
+        .btn-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+        }
+
+        /* Animación suave para la entrada */
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+    <div class="max-w-md w-full card-gradient rounded-3xl overflow-hidden shadow-2xl fade-in">
+        
+        <!-- Encabezado con Imagen/Logo -->
+        <div class="relative h-48 bg-slate-800 flex items-center justify-center overflow-hidden">
+            <!-- Imagen de fondo temática (SVG decorativo) -->
+            <svg class="absolute opacity-10 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M0 0 L100 0 L100 100 L0 100 Z" fill="url(#grid)"></path>
+                <defs>
+                    <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                        <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5"/>
+                    </pattern>
+                </defs>
+            </svg>
+            
+            <div class="z-10 text-center">
+                <div class="bg-orange-500 p-4 rounded-2xl inline-block mb-3 shadow-lg">
+                    <!-- Icono de Herramientas -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37a1.724 1.724 0 002.572-1.065z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                </div>
+                <h1 class="text-white text-3xl font-extrabold tracking-tight">CIDES<span class="text-orange-500">PERFORMANCE</span></h1>
+                <p class="text-slate-400 text-sm font-medium tracking-widest uppercase mt-1">Soluciones Automotrices</p>
+            </div>
+        </div>
+
+        <!-- Información Principal -->
+        <div class="p-8">
+            <div class="mb-8 accent-border pl-4">
+                <h2 class="text-white text-xl font-bold">Emiliano Cides</h2>
+                <p class="text-orange-500 text-sm font-semibold italic">Técnico Electromecánico</p>
+            </div>
+
+            <!-- Servicios -->
+            <div class="grid grid-cols-2 gap-3 mb-8">
+                <div class="bg-slate-800/50 p-3 rounded-xl border border-slate-700 h-full">
+                    <p class="text-white text-xs font-bold mb-1">🔧 Mecánica General</p>
+                    <p class="text-slate-400 text-[10px] leading-relaxed">Service, tren delantero, amortiguación y frenos.</p>
+                </div>
+                <div class="bg-slate-800/50 p-3 rounded-xl border border-slate-700 h-full">
+                    <p class="text-white text-xs font-bold mb-1">⚡ Electricidad</p>
+                    <p class="text-slate-400 text-[10px] leading-relaxed">Diagnóstico por escáner y reparación de ramales.</p>
+                </div>
+            </div>
+
+            <!-- Botones de Acción -->
+            <div class="space-y-4">
+                <!-- Botón de Llamada -->
+                <a href="tel:+542994227575" class="w-full btn-hover transition-all bg-orange-500 text-white font-bold py-4 rounded-2xl flex items-center justify-center gap-3 shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    Llamar ahora
+                </a>
+
+                <div class="flex gap-3">
+                    <!-- Botón de Ubicación -->
+                    <a href="https://maps.app.goo.gl/CzDqdoJF5zEnAJ1HA" target="_blank" class="flex-1 btn-hover transition-all bg-slate-800 text-white py-3 rounded-xl border border-slate-700 flex items-center justify-center gap-2 text-sm font-semibold">
+                        📍 Ubicación
+                    </a>
+                    
+                    <!-- Botón de WhatsApp -->
+                    <a href="https://wa.me/542994227575?text=Hola%20Emiliano,%20necesito%20realizar%20una%20consulta%20por%20un%20servicio%20mecánico." target="_blank" class="flex-1 btn-hover transition-all bg-slate-800 text-white py-3 rounded-xl border border-slate-700 flex items-center justify-center gap-2 text-sm font-semibold">
+                        💬 WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Pie de tarjeta -->
+            <div class="mt-8 pt-6 border-t border-slate-800 flex flex-col gap-2">
+                <div class="flex items-center gap-3 text-slate-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <span class="text-xs">Atención a domicilio y diagnósticos sin cargo</span>
+                </div>
+                <div class="flex items-center gap-3 text-slate-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span class="text-xs">Lunes a Viernes: 08:00 - 18:00</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Notificación de copiado -->
+        <div id="toast" class="fixed bottom-10 left-1/2 -translate-x-1/2 bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm shadow-xl opacity-0 transition-opacity pointer-events-none">
+            ¡Número copiado!
+        </div>
+    </div>
+
+    <script>
+        // Función de respaldo por si el href tel: no funcionara en algún navegador antiguo
+        function copyNumber() {
+            const phoneNumber = "+542994227575";
+            const el = document.createElement('textarea');
+            el.value = phoneNumber;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+
+            const toast = document.getElementById('toast');
+            toast.style.opacity = '1';
+            setTimeout(() => {
+                toast.style.opacity = '0';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
